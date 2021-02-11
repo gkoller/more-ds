@@ -1,4 +1,6 @@
 #  Copyright 2019 SURF.
+#  Copyright 2021 Guido Kollerie
+#
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
 #  You may obtain a copy of the License at
@@ -32,11 +34,13 @@ class URL(str):
 
     Example::
 
-        base_url = URL("http://example.org/")
-        api_url = base_url / "api"
-        url = api_url / "ip" / "address" // dict(version=4)
+        >>> from more_ds.network.url import URL
+        >>> base_url = URL("http://example.org/")
+        >>> api_url = base_url / "api"
+        >>> url = api_url / "ip" / "address" // dict(version=4)
+        >>> print(url)
+        http://example.org/api/ip/address?version=4
 
-        print(url) -> http://example.org/api/ip/address?version=4
     """
 
     def __truediv__(self, path: object) -> URL:

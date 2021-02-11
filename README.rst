@@ -41,7 +41,7 @@ that correspond to the ``/`` and ``//`` operators.
 The ``/`` operator is used to concatenate separate path components of a URL.
 The ``//`` operator is used to append a query string by supplying it with a dictionary.
 
-An example should make this clear::
+An example should make this clear:
 
 .. code-block:: python
 

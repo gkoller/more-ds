@@ -1,6 +1,15 @@
 Changelog
 =========
 
+[0.0.3] - 2021-01-22
+--------------------
+
+Fixed
+^^^^^
+
+- Allow for repeatedly adding new query parameters (contributed by Jan Murre
+  @jjmurre)
+
 [0.0.2] - 2021-01-11
 --------------------
 

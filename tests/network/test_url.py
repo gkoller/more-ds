@@ -36,3 +36,7 @@ def test_url() -> None:  # noqa: D103
     # query string properly url encoded?
     url = api_url // {"query": ' "%-.<>\\^_`{|}~'}
     assert "http://example.org/api?query=+%22%25-.%3C%3E%5C%5E_%60%7B%7C%7D~" == url
+
+    url = api_url / "ip" / "address" // {"version": 4}
+    url = URL(str(url)) // {"extra": [2]}
+    assert "http://example.org/api/ip/address?version=4&extra=2" == url

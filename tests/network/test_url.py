@@ -12,6 +12,7 @@
 #  limitations under the License.
 #
 
+from urllib.parse import parse_qs, urlparse
 from more_ds.network.url import URL
 
 
@@ -39,4 +40,5 @@ def test_url() -> None:  # noqa: D103
 
     url = api_url / "ip" / "address" // {"version": 4}
     url = URL(str(url)) // {"extra": [2]}
-    assert "http://example.org/api/ip/address?version=4&extra=2" == url
+    parts = urlparse(url)
+    assert parse_qs(parts.query) == {"version": ["4"], "extra": ["2"]}

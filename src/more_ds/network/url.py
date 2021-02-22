@@ -17,7 +17,7 @@
 from __future__ import annotations
 
 from typing import Mapping
-from urllib.parse import urlencode
+from urllib.parse import parse_qs, urlencode, urlparse, urlunparse
 
 
 class URL(str):
@@ -69,8 +69,10 @@ class URL(str):
         Returns:
             a new URL object with the `query` appended as a query string.
         """
-        params = urlencode(query)
-        return URL(self + f"?{params}")
+        parts = urlparse(self)
+        params = {**parse_qs(parts.query), **query}
+        parts = parts._replace(query=urlencode(params, doseq=True))
+        return URL(urlunparse(parts))
 
     def __repr__(self) -> str:
         """Return printable presentation of URL."""

@@ -26,7 +26,7 @@ exclude = '''
 github_url = "https://github.com/gkoller/more-ds"
 
 [tool.tbump.version]
-current = "0.0.3"
+current = "0.0.4"
 regex = '''
   (?P<major>\d+)
   \.

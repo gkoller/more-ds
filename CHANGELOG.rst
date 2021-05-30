@@ -1,6 +1,18 @@
 Changelog
 =========
 
+[0.0.4] - 2021-05-30
+--------------------
+
+Added
+^^^^^
+
+- Added ``py.typed`` to package, so that MyPy can use the type annotations from
+  ``more-ds``.
+- Included ``CHANGELOG.rst`` in ``sdist`` and specified ``project_urls`` in
+  ``setup.cfg`` so that the changelog is visible from pypi.org.
+
+
 [0.0.3] - 2021-01-22
 --------------------
 

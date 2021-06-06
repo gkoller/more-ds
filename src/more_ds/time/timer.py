@@ -50,9 +50,9 @@ class Timer:
 
     @property
     def elapsed(self) -> timedelta:
-        """Return the time elapsed in ``Timer``'s context.
+        """Return the time elapsed in :class:`Timer`'s context.
 
         Returns:
-            Time elapsed in ``Timer``'s context as a :class:~datetime.timedelta` object.
+            Time elapsed in :class:`Timer`'s context as a :class:`~datetime.timedelta` object.
         """
         return timedelta(microseconds=self.duration / 1_000)

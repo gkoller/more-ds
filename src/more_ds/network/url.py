@@ -23,14 +23,20 @@ from urllib.parse import parse_qs, urlencode, urlparse, urlunparse
 class URL(str):
     """Helper class for conveniently constructing URLs.
 
-    To that end the `/` operator has been overloaded to append path elements. Similarly the `//`
-    operator has been overloaded to easily add a query string to the URL.
+    To that end the ``/`` operator has been overloaded
+    to append path elements.
+    Similarly the ``//`` operator has been overloaded
+    to easily add a query string to the :class:`URL`.
 
-    Being a subclass of `str`, instances of `URL` can be used anywhere a `str` is expected.
+    Being a subclass of :class:`str`,
+    instances of :class:`URL` can be used anywhere a :class:`str` is expected.
 
-    *IMPORTANT* No form of verification is performed. Meaning for instance that any string,
-    not only those that actually make up an URL, can be use to initialize an URL instance. And
-    one can add multiple query strings to an URL instance leading to an improperly formatted URL.
+    *IMPORTANT* No form of verification is performed.
+    Meaning for instance that any string,
+    not only those that actually make up an :class:`URL`,
+    can be use to initialize an :class:`URL` instance.
+    And one can add multiple query strings to an :class:`URL` instance
+    leading to an improperly formatted :class:`URL`.
 
     Example::
 
@@ -46,14 +52,16 @@ class URL(str):
     def __truediv__(self, path: object) -> URL:
         """Append path element to the URL object.
 
-        It prevents accidental inclusion of too many slashes between the appended path elements
-        should the URL end in a slash and/or the `path` element start with a slash.
+        It prevents accidental inclusion of too many slashes
+        between the appended ``path`` elements
+        should the :class:`URL` end in a slash
+        and/or the ``path`` element start with a slash.
 
         Args:
             path: path element to append
 
         Returns:
-            A new URL object with the `path` element appended.
+            A new :class:`URL` object with the ``path`` element appended.
 
         """
         if not isinstance(path, str):
@@ -67,7 +75,7 @@ class URL(str):
             query: Mapping of values that should be converted to a query string.
 
         Returns:
-            a new URL object with the `query` appended as a query string.
+            a new :class:`URL` object with the ``query`` appended as a query string.
         """
         parts = urlparse(self)
         params = {**parse_qs(parts.query), **query}

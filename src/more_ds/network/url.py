@@ -34,7 +34,7 @@ class URL(str):
 
     Example::
 
-        >>> from more_ds.network.url import URL
+        >>> from more_ds.network import URL
         >>> base_url = URL("http://example.org/")
         >>> api_url = base_url / "api"
         >>> url = api_url / "ip" / "address" // dict(version=4)

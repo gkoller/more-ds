@@ -8,17 +8,17 @@ from typing import Optional, Type
 class Timer:
     """Simple context manager for timing blocks of code.
 
-    With ``Timer`` you can create a runtime context
+    With :class:`Timer` you can create a runtime context
     in which a block of code code will be timed.
     When runtime context is exited,
-    the ``Timer`` instance responsible for the runtime context
+    the :class:`Timer` instance responsible for the runtime context
     can be queried for the :attr:`duration` or :attr:`elapsed` time.
 
     Examples::
 
         from time import sleep
 
-        from more_ds.time.timer import Timer
+        from more_ds.time import Timer
         with Timer() as t:
             # sleep for half a second
             sleep(.5)

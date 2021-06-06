@@ -1,6 +1,22 @@
 Changelog
 =========
 
+[0.0.5] - 2021-06-06
+--------------------
+
+Added
+^^^^^
+
+- ``Timer`` class for timing a block of code
+- Sphinx based documentation: https://more-ds.readthedocs.io/en/latest/
+
+Changed
+^^^^^^^
+
+- Imported data structures in their parent package, shortening the required
+  import statements. Eg ``from more_ds.network.url import URL`` now becomes
+  ``from more_ds.network import URL``
+
 [0.0.4] - 2021-05-30
 --------------------
 
@@ -25,8 +41,8 @@ Fixed
 [0.0.2] - 2021-01-11
 --------------------
 
-Changed
-^^^^^^^
+Fixed
+^^^^^
 
 - Fixed README.rst rendering on PyPi.
 

@@ -73,3 +73,6 @@ html_static_path = ["_static"]
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = "sphinx"
+
+# If __init__ methods have docstring, include it.
+napoleon_include_init_with_doc = True

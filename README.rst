@@ -9,6 +9,12 @@ provides simple and convenient Python data structures.
 Data Structures
 ===============
 
+id
+--
+
+``SemVer``
+    Class for easy creation of semantic version numbers.
+
 network
 -------
 
@@ -49,6 +55,31 @@ Or
         sleep(.5)
 
     print(t.elapsed)  # -> 0:00:00.501864
+
+
+Or
+
+.. code-block:: python
+
+    >>> from more_ds.id import SemVer
+    >>> old = SemVer("v3.1.4")
+    >>> new = SemVer("3.2")
+    >>> old
+    SemVer("3.1.4")
+    >>> new
+    SemVer("3.2.0")
+    >>> old == new
+    False
+    >>> old < new
+    True
+    >>> old > new
+    False
+    >>> repr(old)
+    'SemVer("3.1.4")'
+    >>> repr(new)
+    'SemVer("3.2.0")'
+    >>> isinstance(old, str)
+    True
 
 
 Origin

@@ -1,6 +1,14 @@
 Changelog
 =========
 
+[0.0.6] - 2021-11-29
+--------------------
+
+Added
+^^^^^
+
+- ``SemVer`` class for easy semantic version number creation.
+
 [0.0.5] - 2021-06-06
 --------------------
 

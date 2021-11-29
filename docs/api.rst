@@ -3,6 +3,13 @@
 API
 ===
 
+id
+--
+
+.. automodule:: more_ds.id
+   :members:
+   :special-members: __init__, __str__, __repr__
+
 network
 -------
 

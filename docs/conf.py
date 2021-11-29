@@ -27,7 +27,7 @@ sys.path.insert(0, (Path("..") / "src").resolve().as_posix())
 project = "More Data Structures"
 copyright = "2021, Guido Kollerie"  # noqa: A001 shadowing a Python builtin
 author = "Guido Kollerie"
-version = "0.0.5"
+version = "0.0.6"
 release = version
 
 # -- General configuration ---------------------------------------------------
